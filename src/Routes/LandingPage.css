@@ -8,19 +8,19 @@ html, body, #root {
 .Background {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 200vh;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #0A0F33 0%, #1E2D99 100%);
+  background: linear-gradient(180deg, #0e1546 10%, #1E2D99 30%);
 }
 
 /* 헤더 */
 .barheader {
-  display: flex;
+  display: flex;  
   justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 60px;
-  background: #FFFFFF;
+  background: #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,6 +30,28 @@ html, body, #root {
   gap: 2rem;
 }
 
+/* 로고 컨테이너 */
+.logo-container {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 11;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  margin-left: 10px;
+}
+
 /* 가격/로그인 섹션 */
 .price {
   display: flex;
@@ -37,13 +59,14 @@ html, body, #root {
   gap: 2rem;
 }
 
+
 .pricetext {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #262626;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -53,8 +76,10 @@ html, body, #root {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #262626;
+  color: #fffcfc;
   text-decoration: none;
+  position: relative;
+  left: 10px;
 }
 
 .logintext:hover {
@@ -93,8 +118,8 @@ main {
   padding: 0 2rem;
   margin-top: 120px; /* 헤더 높이 + 여백 */
   min-height: 60vh;
-  background: rgba(0, 0, 0, 0.1);
   justify-content: center;
+  margin-left: 5rem;
 }
 
 /* 메인 제목 */
@@ -125,6 +150,7 @@ main {
   transition: background-color 0.3s ease;
   text-decoration: none;
   margin-top: 2rem;
+  margin-left: 0.5rem;
 }
 
 .signupbutton:hover {
@@ -137,6 +163,7 @@ main {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 20rem;
 }
 
 .text1 {
@@ -266,3 +293,55 @@ main {
     font-size: 0.9rem;
   }
 }
+
+/* 우측 장식 구체들 */
+.decorative-spheres {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 200vh;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.sphere {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+  object-fit: contain;
+}
+
+.sphere-1 {
+  width: 300px;
+  height: 300px;
+  top: 12.5%;
+  right: 30%;
+  animation-delay: 0s;
+}
+
+.sphere-2 {
+  width: 200px;
+  height: 200px;
+  top: 37.5%;
+  right: 55%;
+  animation-delay: 2s;
+}
+
+.sphere-3 {
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  right: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+

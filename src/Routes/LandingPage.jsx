@@ -6,6 +6,12 @@ function LandingPage() {
   return (
     <div className="Background"> {/* 배경 클래스 적용 */}
       <header className="barheader">
+        {/* 로고 */}
+        <div className="logo-container">
+          <img src="/images/Logo.png" alt="CosMove Logo" className="logo" />
+          <img src="/images/COSMOVE.png" alt="CosMove Text" className="logo-text" />
+        </div>
+        
         <div className="price">
           <span className="pricetext">가격플랜</span>
           <Link to="/login" className="logintext">로그인</Link>
@@ -14,7 +20,7 @@ function LandingPage() {
         {/* 회원가입 버튼 */}
         <Link to="/signup" className="signuptext">
           회원가입
-        </Link>
+        </Link> 
       </header>
 
       <main>
@@ -32,6 +38,13 @@ function LandingPage() {
           <li>시간 관리 능력 향상</li>
         </ul>
       </section>
+      
+      {/* 우측 장식 구체들 */}
+      <div className="decorative-spheres">
+        <img src="/images/circle1.png" alt="decoration" className="sphere sphere-1" />
+        <img src="/images/circle2.png" alt="decoration" className="sphere sphere-2" />
+        <img src="/images/circle3.png" alt="decoration" className="sphere sphere-3" />
+      </div>
     </div>
   );
 }
